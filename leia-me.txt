@@ -1,0 +1,30 @@
+-> Gradle
+	- Instalação do Gradle
+		- Obter os arquivos binários(Binary only distribution) do Gradle na seção "downloads" -> https://gradle.org/
+		- Após o download, descompactá-lo em algum diretório no computador, como c:\java\gradle-1.4.
+		- O diretório escolhido deve ser configurado na variável de ambiente GRADLE_HOME, e, posteriormente, incluir esta na variável PATH, como: %GRADLE_HOME%\bin
+		- Se tudo foi configurado de acordo, basta executar o comando(prompt) gradle –v e verificar o resultado.
+	- Guia Usuário: https://docs.gradle.org/current/userguide/userguide.html
+
+Link APP: http://localhost:8080/gradle-war
+
+Detalhes Gradle WAR:
+	- https://docs.gradle.org/current/userguide/war_plugin.html
+	- https://docs.gradle.org/current/dsl/org.gradle.api.tasks.bundling.War.html
+
+####### LAYOUT PROJETO #############################################################################################
+Diretório (Padrão)           SIGNIFICADO
+src/main/java                código-fonte das classes
+src/main/resources           arquivos que serão incluídos como recursos 
+src/test/java                código fonte de teste       
+src/test/resources           serão incluídos no classpath usado para executar os testes         
+src/sourceSet/java           Java source for the given source set            
+src/sourceSet/resources      Resources for the given source set
+src/main/webapp              Fonte da aplicação Web.
+
+
+-> O plugin WAR desativa a geração default do arquivo JAR.
+-> Para usar o plugin WAR, incluir o seguinte em seu script build: apply plugin: 'war'
+-> O plugin WAR adiciona a seguinte TASK para o projeto
+	Task name: war
+    Descrição: Monta o arquivo WAR da aplicação	
