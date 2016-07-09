@@ -23,8 +23,10 @@ src/sourceSet/resources      Resources for the given source set
 src/main/webapp              Fonte da aplicação Web.
 
 
--> O plugin WAR desativa a geração default do arquivo JAR.
--> Para usar o plugin WAR, incluir o seguinte em seu script build: apply plugin: 'war'
--> O plugin WAR adiciona a seguinte TASK para o projeto
+-> O plugin WAR adiciona suporte para empacotar arquivo WAR para aplicações WEB.
+-> O plugin WAR adiciona a seguinte TASK(default) para o projeto
 	Task name: war
     Descrição: Monta o arquivo WAR da aplicação	
+-> O plugin WAR extends o plugin Java.
+-> O plugin WAR desativa a geração default do arquivo JAR.
+-> Para usar o plugin WAR, incluir o seguinte em seu script build: apply plugin: 'war'
